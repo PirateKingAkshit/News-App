@@ -10,6 +10,7 @@ export const FetchNewsApi = {
     const res = await fetch(
       `https://newsdata.io/api/1/news?apikey=pub_28539f380ffbd3ef255999e95239fde151782&q=${query}`
     );
+    
     const results = await res.json();
     return results.results;
   },

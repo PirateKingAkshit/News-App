@@ -22,13 +22,13 @@ const NewsBody = () => {
   
   return (
     <>
-      <div className="newsbody_container_parent">
-        {loading ? (
-          <h1>loading...</h1>
-        ) : (
-          <ArticleList articles={articles} />
-        )}
-      </div>
+      {loading ? (
+        <div className="bg-white dark:bg-slate-900 h-screen flex justify-center items-center ">
+          <div className="text-white border-t-4 border-blue-500 dark:border-white rounded-full animate-spin h-20 w-20"></div>
+        </div>
+      ) : (
+        <ArticleList articles={articles} />
+      )}
     </>
   );
 }
