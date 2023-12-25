@@ -1,7 +1,7 @@
 export const FetchNewsApi = {
   fetchNewsApi: async () => {
     const res = await fetch(
-      "https://newsdata.io/api/1/news?apikey=pub_28539f380ffbd3ef255999e95239fde151782&language=en&q=india%20latest"
+      "https://newsdata.io/api/1/news?apikey=pub_28539f380ffbd3ef255999e95239fde151782&language=en&q=india"
     );
     const results = await res.json();
     return results.results;
