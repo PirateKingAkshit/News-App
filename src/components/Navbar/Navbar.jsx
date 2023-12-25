@@ -55,10 +55,10 @@ export default function Navbar({ onSearch }) {
   };
 
   return (
-    <Disclosure as="nav" className="bg-gray-800">
+    <Disclosure as="nav" className="bg-gray-800 sticky top-0">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-8xl px-2 sm:px-6 lg:px-8 bg-blue-700  dark:bg-black ">
+          <div className="mx-auto max-w-8xl px-2 sm:px-6 lg:px-8 bg-blue-700  dark:bg-black  ">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                 {/* Mobile menu button*/}
@@ -135,7 +135,6 @@ export default function Navbar({ onSearch }) {
                   className="relative  rounded-full p-1 text-white hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                   onClick={() => {
                     theme === "light" ? setTheme("dark") : setTheme("light");
-                    
                   }}
                 >
                   <span className="absolute -inset-1.5" />

@@ -41,7 +41,7 @@ const Pagination = ({ totalItems, onPageChange, currentPage, itemsPerPage, start
     };
   return (
     <>
-      {totalItems > 0 ? (
+      {totalItems > 0 && totalItems >lastIndex  ? (
         <>
           <div className="flex items-center justify-between border-t border-gray-200 bg-white dark:bg-slate-900 px-4 py-3 sm:px-6">
             <div className="flex flex-1 justify-between sm:hidden">
@@ -62,11 +62,14 @@ const Pagination = ({ totalItems, onPageChange, currentPage, itemsPerPage, start
             </div>
             <div className="hidden sm:flex sm:flex-1 sm:items-center sm:justify-between">
               <div>
-                <p className="text-sm text-gray-700 dark:text-white">
-                  Showing <span className="font-medium">{startIndex + 1}</span>{" "}
-                  to <span className="font-medium">{lastIndex}</span> of{" "}
-                  <span className="font-medium">{totalItems}</span> results
-                </p>
+                
+                    <p className="text-sm text-gray-700 dark:text-white">
+                      Showing{" "}
+                      <span className="font-medium">{startIndex + 1}</span> to{" "}
+                      <span className="font-medium">{lastIndex}</span> of{" "}
+                      <span className="font-medium">{totalItems}</span> results
+                    </p>
+                 
               </div>
               <div>
                 <nav

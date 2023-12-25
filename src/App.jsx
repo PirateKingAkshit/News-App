@@ -10,7 +10,7 @@ function App() {
   }
 
   return (
-    <div className="font-serif">
+    <div className="font-serif relative ">
       <Navbar onSearch={onSearch} />
       <Routes>
         <Route path="/" element={<NewsBody />} />
